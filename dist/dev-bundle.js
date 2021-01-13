@@ -16,7 +16,18 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalWindow */ \"./src/modules/modalWindow.js\");\n/* harmony import */ var _modules_scrollToBlock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollToBlock */ \"./src/modules/scrollToBlock.js\");\n\n\n(0,_modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_scrollToBlock__WEBPACK_IMPORTED_MODULE_1__.default)();\n\n//# sourceURL=webpack://eltctrosite/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalWindow */ \"./src/modules/modalWindow.js\");\n/* harmony import */ var _modules_scrollToBlock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollToBlock */ \"./src/modules/scrollToBlock.js\");\n/* harmony import */ var _modules_mobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/mobileMenu */ \"./src/modules/mobileMenu.js\");\n\n\n\n(0,_modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_scrollToBlock__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_mobileMenu__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n//# sourceURL=webpack://eltctrosite/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/mobileMenu.js":
+/*!***********************************!*\
+  !*** ./src/modules/mobileMenu.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar mobileMenu = function mobileMenu() {};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mobileMenu);\n\n//# sourceURL=webpack://eltctrosite/./src/modules/mobileMenu.js?");
 
 /***/ }),
 
@@ -455,7 +466,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "fbe32113d7a2dbd122be"
+/******/ 		__webpack_require__.h = () => "b38da454c4c737dc4eb6"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
