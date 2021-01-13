@@ -27,7 +27,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar mobileMenu = function mobileMenu() {};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mobileMenu);\n\n//# sourceURL=webpack://eltctrosite/./src/modules/mobileMenu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar mobileMenu = function mobileMenu() {\n  var menu = document.querySelector('.mobile-menu');\n  var overlay = document.querySelector('.overlay');\n  document.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target.matches('.mob-menu-btn') || target.matches('.mob-menu-btn>span')) {\n      menu.style.right = '0';\n      overlay.style.cssText = 'opacity: 1; z-index: 20';\n    }\n\n    if (target.matches('.mobile-menu-close') || target.matches('ul>li>a') || target.matches('.overlay')) {\n      menu.style.right = '-400px';\n      overlay.style.cssText = 'opacity: 0; z-index: -100';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mobileMenu);\n\n//# sourceURL=webpack://eltctrosite/./src/modules/mobileMenu.js?");
 
 /***/ }),
 
@@ -466,7 +466,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "f8e1629ab4ddbf15c161"
+/******/ 		__webpack_require__.h = () => "9a98f4e0d9d048c26de4"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
