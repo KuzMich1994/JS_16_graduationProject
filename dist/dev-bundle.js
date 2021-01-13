@@ -27,7 +27,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar modalWindow = function modalWindow() {\n  var modalCallback = document.querySelector('.modal-callback');\n  var modalOvarlay = document.querySelector('.modal-overlay');\n\n  var toggleModal = function toggleModal() {\n    document.addEventListener('click', function (e) {\n      e.preventDefault();\n      var target = e.target;\n\n      if (target.matches('.callback-btn') || target.matches('.mob-menu-btn')) {\n        modalCallback.style.display = 'block';\n        modalOvarlay.style.display = 'block';\n      }\n    });\n  };\n\n  toggleModal();\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modalWindow);\n\n//# sourceURL=webpack://eltctrosite/./src/modules/modalWindow.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar modalWindow = function modalWindow() {\n  var modalCallback = document.querySelector('.modal-callback');\n  var modalOvarlay = document.querySelector('.modal-overlay');\n  document.addEventListener('click', function (e) {\n    e.preventDefault();\n    var target = e.target;\n\n    if (target.matches('.callback-btn') || target.matches('.mob-menu-btn')) {\n      modalCallback.style.display = 'block';\n      modalOvarlay.style.display = 'block';\n    }\n\n    if (target.matches('.modal-overlay') || target.matches('.modal-close>img')) {\n      modalCallback.style.display = 'none';\n      modalOvarlay.style.display = 'none';\n    }\n  });\n\n  var addStyle = function addStyle() {\n    modalCallback.style.opacity = '0';\n    modalCallback.style.transition = 'all .8s';\n    modalOvarlay.style.opacity = '0';\n    modalOvarlay.style.transition = 'all .8s';\n  };\n\n  if (window.innerWidth > 768) {\n    addStyle();\n\n    var addAnimation = function addAnimation() {\n      requestAnimationFrame(addAnimation);\n\n      if (modalCallback.style.display === 'block') {\n        modalCallback.style.opacity = '1';\n        modalOvarlay.style.opacity = '1';\n      }\n\n      if (modalCallback.style.display === 'none') {\n        modalCallback.style.opacity = '0';\n        modalOvarlay.style.opacity = '0';\n      }\n    };\n\n    addAnimation();\n  }\n\n  addStyle();\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modalWindow);\n\n//# sourceURL=webpack://eltctrosite/./src/modules/modalWindow.js?");
 
 /***/ }),
 
@@ -444,7 +444,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "e23b0d8e06b4a95dbb01"
+/******/ 		__webpack_require__.h = () => "7bce8331369e38e5d26c"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
