@@ -6,7 +6,7 @@ const modalWindow = () => {
     e.preventDefault();
     const target = e.target;
 
-    if (target.matches('.callback-btn') || target.matches('.mob-menu-btn')) {
+    if (target.matches('.callback-btn')) {
       modalCallback.style.display = 'block';
       modalOvarlay.style.display = 'block';
     }

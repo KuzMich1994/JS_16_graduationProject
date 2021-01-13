@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalWindow */ \"./src/modules/modalWindow.js\");\n\n(0,_modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n//# sourceURL=webpack://eltctrosite/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalWindow */ \"./src/modules/modalWindow.js\");\n/* harmony import */ var _modules_scrollToBlock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollToBlock */ \"./src/modules/scrollToBlock.js\");\n\n\n(0,_modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_scrollToBlock__WEBPACK_IMPORTED_MODULE_1__.default)();\n\n//# sourceURL=webpack://eltctrosite/./src/index.js?");
 
 /***/ }),
 
@@ -27,7 +27,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar modalWindow = function modalWindow() {\n  var modalCallback = document.querySelector('.modal-callback');\n  var modalOvarlay = document.querySelector('.modal-overlay');\n  document.addEventListener('click', function (e) {\n    e.preventDefault();\n    var target = e.target;\n\n    if (target.matches('.callback-btn') || target.matches('.mob-menu-btn')) {\n      modalCallback.style.display = 'block';\n      modalOvarlay.style.display = 'block';\n    }\n\n    if (target.matches('.modal-overlay') || target.matches('.modal-close>img')) {\n      modalCallback.style.display = 'none';\n      modalOvarlay.style.display = 'none';\n    }\n  });\n\n  var addStyle = function addStyle() {\n    modalCallback.style.opacity = '0';\n    modalCallback.style.transition = 'all .8s';\n    modalOvarlay.style.opacity = '0';\n    modalOvarlay.style.transition = 'all .8s';\n  };\n\n  if (window.innerWidth > 768) {\n    addStyle();\n\n    var addAnimation = function addAnimation() {\n      requestAnimationFrame(addAnimation);\n\n      if (modalCallback.style.display === 'block') {\n        modalCallback.style.opacity = '1';\n        modalOvarlay.style.opacity = '1';\n      }\n\n      if (modalCallback.style.display === 'none') {\n        modalCallback.style.opacity = '0';\n        modalOvarlay.style.opacity = '0';\n      }\n    };\n\n    addAnimation();\n  }\n\n  addStyle();\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modalWindow);\n\n//# sourceURL=webpack://eltctrosite/./src/modules/modalWindow.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar modalWindow = function modalWindow() {\n  var modalCallback = document.querySelector('.modal-callback');\n  var modalOvarlay = document.querySelector('.modal-overlay');\n  document.addEventListener('click', function (e) {\n    e.preventDefault();\n    var target = e.target;\n\n    if (target.matches('.callback-btn')) {\n      modalCallback.style.display = 'block';\n      modalOvarlay.style.display = 'block';\n    }\n\n    if (target.matches('.modal-overlay') || target.matches('.modal-close>img')) {\n      modalCallback.style.display = 'none';\n      modalOvarlay.style.display = 'none';\n    }\n  });\n\n  var addStyle = function addStyle() {\n    modalCallback.style.opacity = '0';\n    modalCallback.style.transition = 'all .8s';\n    modalOvarlay.style.opacity = '0';\n    modalOvarlay.style.transition = 'all .8s';\n  };\n\n  if (window.innerWidth > 768) {\n    addStyle();\n\n    var addAnimation = function addAnimation() {\n      requestAnimationFrame(addAnimation);\n\n      if (modalCallback.style.display === 'block') {\n        modalCallback.style.opacity = '1';\n        modalOvarlay.style.opacity = '1';\n      }\n\n      if (modalCallback.style.display === 'none') {\n        modalCallback.style.opacity = '0';\n        modalOvarlay.style.opacity = '0';\n      }\n    };\n\n    addAnimation();\n  }\n\n  addStyle();\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modalWindow);\n\n//# sourceURL=webpack://eltctrosite/./src/modules/modalWindow.js?");
+
+/***/ }),
+
+/***/ "./src/modules/scrollToBlock.js":
+/*!**************************************!*\
+  !*** ./src/modules/scrollToBlock.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar scrollToBlock = function scrollToBlock() {\n  var navbarLinks = document.querySelectorAll('ul>li>a');\n  navbarLinks.forEach(function (item) {\n    item.addEventListener('click', function (e) {\n      e.preventDefault();\n      var blockID = item.getAttribute('href').substr(1);\n      console.log(blockID);\n      document.getElementById(blockID).scrollIntoView({\n        behavior: \"smooth\",\n        block: \"start\"\n      });\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollToBlock);\n\n//# sourceURL=webpack://eltctrosite/./src/modules/scrollToBlock.js?");
 
 /***/ }),
 
@@ -444,7 +455,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "7bce8331369e38e5d26c"
+/******/ 		__webpack_require__.h = () => "fbe32113d7a2dbd122be"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
