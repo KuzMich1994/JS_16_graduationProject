@@ -49,7 +49,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar scrollToBlock = function scrollToBlock() {\n  var navbarLinks = document.querySelectorAll('ul>li>a');\n  navbarLinks.forEach(function (item) {\n    item.addEventListener('click', function (e) {\n      e.preventDefault();\n      var blockID = item.getAttribute('href').substr(1);\n      console.log(blockID);\n      document.getElementById(blockID).scrollIntoView({\n        behavior: \"smooth\",\n        block: \"start\"\n      });\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollToBlock);\n\n//# sourceURL=webpack://eltctrosite/./src/modules/scrollToBlock.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar scrollToBlock = function scrollToBlock() {\n  var navbarLinks = document.querySelectorAll('ul>li>a');\n  navbarLinks.forEach(function (item) {\n    item.addEventListener('click', function (e) {\n      e.preventDefault();\n      var blockID = item.getAttribute('href').substr(1);\n      document.getElementById(blockID).scrollIntoView({\n        behavior: \"smooth\",\n        block: \"start\"\n      });\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollToBlock);\n\n//# sourceURL=webpack://eltctrosite/./src/modules/scrollToBlock.js?");
 
 /***/ }),
 
@@ -466,7 +466,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "b38da454c4c737dc4eb6"
+/******/ 		__webpack_require__.h = () => "f8e1629ab4ddbf15c161"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
