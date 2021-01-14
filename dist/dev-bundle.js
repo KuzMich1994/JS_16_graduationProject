@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalWindow */ \"./src/modules/modalWindow.js\");\n/* harmony import */ var _modules_scrollToBlock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollToBlock */ \"./src/modules/scrollToBlock.js\");\n/* harmony import */ var _modules_mobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/mobileMenu */ \"./src/modules/mobileMenu.js\");\n\n\n\n(0,_modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_scrollToBlock__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_mobileMenu__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n//# sourceURL=webpack://eltctrosite/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalWindow */ \"./src/modules/modalWindow.js\");\n/* harmony import */ var _modules_scrollToBlock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollToBlock */ \"./src/modules/scrollToBlock.js\");\n/* harmony import */ var _modules_mobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/mobileMenu */ \"./src/modules/mobileMenu.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n\n\n\n\n(0,_modules_modalWindow__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_scrollToBlock__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_mobileMenu__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_3__.default)();\n\n//# sourceURL=webpack://eltctrosite/./src/index.js?");
 
 /***/ }),
 
@@ -50,6 +50,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar scrollToBlock = function scrollToBlock() {\n  var navbarLinks = document.querySelectorAll('ul>li>a');\n  navbarLinks.forEach(function (item) {\n    item.addEventListener('click', function (e) {\n      e.preventDefault();\n      var blockID = item.getAttribute('href').substr(1);\n      document.getElementById(blockID).scrollIntoView({\n        behavior: \"smooth\",\n        block: \"start\"\n      });\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollToBlock);\n\n//# sourceURL=webpack://eltctrosite/./src/modules/scrollToBlock.js?");
+
+/***/ }),
+
+/***/ "./src/modules/slider.js":
+/*!*******************************!*\
+  !*** ./src/modules/slider.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar slider = function slider() {\n  var slide = document.querySelectorAll('.item');\n  var sliderText = document.querySelectorAll('.table');\n  var currentSlide = 0;\n  var interval;\n\n  var prevSlide = function prevSlide(elem, index, strClass) {\n    elem[index].classList.remove(strClass);\n  };\n\n  var nextSlide = function nextSlide(elem, index, strClass) {\n    elem[index].classList.add(strClass);\n  };\n\n  var autoPlaySlide = function autoPlaySlide() {\n    prevSlide(slide, currentSlide, 'item-active');\n    prevSlide(sliderText, currentSlide, 'table-active');\n    currentSlide++;\n\n    if (currentSlide >= slide.length) {\n      currentSlide = 0;\n    }\n\n    nextSlide(slide, currentSlide, 'item-active');\n    nextSlide(sliderText, currentSlide, 'table-active');\n  };\n\n  var startSlide = function startSlide() {\n    var time = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3000;\n    interval = setInterval(autoPlaySlide, time);\n  };\n\n  var stopSlide = function stopSlide() {\n    clearInterval(interval);\n  };\n\n  startSlide();\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n//# sourceURL=webpack://eltctrosite/./src/modules/slider.js?");
 
 /***/ }),
 
@@ -466,7 +477,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "9a98f4e0d9d048c26de4"
+/******/ 		__webpack_require__.h = () => "f748f606c6697f2410c0"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

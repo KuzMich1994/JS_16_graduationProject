@@ -857,6 +857,19 @@ hr.white {
 	height: 450px;
 	position: relative;
 }
+.item {
+	transition: all .5s ease;
+	position: absolute !important;
+	width: 100%;
+	opacity: 0;
+}
+.item-active {
+	opacity: 1;
+}
+.table-active {
+	opacity: 1;
+	visibility: visible;
+}
 .top-slider .item:before {
 	content: "";
 	display: block;
