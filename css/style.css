@@ -866,10 +866,6 @@ hr.white {
 .item-active {
 	opacity: 1;
 }
-.table-active {
-	opacity: 1;
-	visibility: visible;
-}
 .top-slider .item:before {
 	content: "";
 	display: block;
