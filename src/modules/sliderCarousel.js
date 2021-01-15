@@ -7,7 +7,8 @@ class SliderCarousel {
     prev,
     next,
     slidesToShow = 3,
-    infinity = false
+    infinity = false,
+    responsive = []
   }) {
     this.servicesElements = document.querySelector(servicesElements);
     this.servicesCarousel = document.querySelector(servicesCarousel);
@@ -21,6 +22,7 @@ class SliderCarousel {
     },
     this.prev = document.querySelector(prev);
     this.next = document.querySelector(next);
+    this.responsive = responsive;
   }
 
   addMyClass() {
@@ -32,8 +34,11 @@ class SliderCarousel {
   }
 
   addStyle() {
-    const style = document.createElement('style');
-    style.id = 'sliderCarousel-style';
+    let style = document.getElementById('sliderCarousel-style');
+    if (!style) {
+      style = document.createElement('style');
+      style.id = 'sliderCarousel-style';
+    }
     style.textContent = `
       .my-services-elements {
         overflow: hidden;
@@ -76,6 +81,34 @@ class SliderCarousel {
     this.next.addEventListener('click', this.nextSlide.bind(this));
   }
 
+  responsiveInit() {
+    const slidesToShowDefault = this.slidesToShow;
+    const allResponsive = this.responsive.map(item => item.breakpoint);
+    const maxResponsive = Math.max(...allResponsive);
+
+    const checkResponse = () => {
+      const widthWindow = document.documentElement.clientWidth;
+      if (widthWindow < maxResponsive) {
+        for (let i = 0; i < allResponsive.length; i++) {
+          if (widthWindow < allResponsive[i]) {
+            this.slidesToShow = this.responsive[i].slideToShow;
+            this.options.maxPosition = this.slides.length - this.slidesToShow;
+            this.options.widthSlide = Math.floor(100 / this.slidesToShow);
+            this.addStyle();
+            console.log(this.options.maxPosition);
+          }
+        }
+      } else {
+        this.slidesToShow = slidesToShowDefault;
+        this.options.widthSlide = Math.floor(100 / this.slidesToShow);
+        this.addStyle();
+      }
+    };
+    checkResponse();
+
+    window.addEventListener('resize', checkResponse);
+  }
+
   init() {
     this.addMyClass();
     this.addStyle();
@@ -86,6 +119,9 @@ class SliderCarousel {
     } else {
       this.addArrows();
       this.sliderControl();
+    }
+    if (this.responsive) {
+      this.responsiveInit();
     }
   }
 }

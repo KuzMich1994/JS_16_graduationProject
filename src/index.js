@@ -16,6 +16,15 @@ const carousel = new SliderCarousel({
   prev: '.arrow-left',
   next: '.arrow-right',
   slidesToShow: 3,
-  infinity: true
+  infinity: true,
+  responsive: [{
+    breakpoint: 992,
+    slideToShow: 2
+  },
+  {
+    breakpoint: 768,
+    slideToShow: 1
+  }
+  ]
 });
 carousel.init();
