@@ -1058,6 +1058,17 @@ video#video_background {
 	position: relative;
 	z-index: 4;
 }
+.modal-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -100px;
+	margin-top: -24px;
+	width: 200px;
+	height: 48px;
+	z-index: 20;
+	cursor: pointer;
+}
 .steps-section .text {
 	font-size: 14px;
 }
