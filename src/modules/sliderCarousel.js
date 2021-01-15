@@ -76,10 +76,6 @@ class SliderCarousel {
     this.next.addEventListener('click', this.nextSlide.bind(this));
   }
 
-  addArrows() {
-
-  }
-
   init() {
     this.addMyClass();
     this.addStyle();
