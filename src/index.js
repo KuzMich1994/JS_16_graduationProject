@@ -5,6 +5,7 @@ import mobileMenu from './modules/mobileMenu';
 import slider from './modules/slider';
 import SliderCarousel from './modules/sliderCarousel';
 import upButton from './modules/upButton';
+import isAccordeon from './modules/accordeon';
 
 modalWindow();
 scrollToBlock();
@@ -30,3 +31,4 @@ const carousel = new SliderCarousel({
 });
 carousel.init();
 upButton();
+isAccordeon();
