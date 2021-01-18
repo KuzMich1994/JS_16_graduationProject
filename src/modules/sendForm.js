@@ -42,8 +42,12 @@ const sendForm = () => {
     form.append(statusMessage);
     showLoadMessage();
     formData = new FormData(form);
+    const body = {};
+    for (const val of formData) {
+      body[val[0]] = val[1];
+    }
 
-    postData(formData)
+    postData(JSON.stringify(body))
       .then(response => {
         if (response.status !== 200) {
           throw new Error('Status network not 200');
@@ -55,10 +59,13 @@ const sendForm = () => {
         console.error(error);
       })
       .then(() => {
+        inputName.value = '';
+        inputPhone.value = '';
         setTimeout(() => {
           const modalCallback = document.querySelector('.modal-callback');
           const modalOverlay = document.querySelector('.modal-overlay');
 
+          statusMessage.remove();
           modalCallback.style.display = 'none';
           modalOverlay.style.display = 'none';
         }, 3000);
