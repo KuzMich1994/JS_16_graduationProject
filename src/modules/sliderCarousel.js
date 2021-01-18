@@ -95,7 +95,6 @@ class SliderCarousel {
             this.options.maxPosition = this.slides.length - this.slidesToShow;
             this.options.widthSlide = Math.floor(100 / this.slidesToShow);
             this.addStyle();
-            console.log(this.options.maxPosition);
           }
         }
       } else {
@@ -112,7 +111,6 @@ class SliderCarousel {
   init() {
     this.addMyClass();
     this.addStyle();
-    console.log(this.options.widthSlide);
 
     if (this.prev && this.next) {
       this.sliderControl();

@@ -3,7 +3,7 @@ const modalWindow = () => {
   const modalOvarlay = document.querySelector('.modal-overlay');
 
   document.addEventListener('click', e => {
-    e.preventDefault();
+    // e.preventDefault();
     const target = e.target;
 
     if (target.matches('.callback-btn') || target.matches('.button-services') ||
